@@ -1,0 +1,13 @@
+<h1>This is a first page!!!</h1>
+
+{%for board in boards.all%}
+
+<div class="container">
+    <h1>
+        <a href="{% url 'detail' board.pk %}"> 제목 : {{board.title}} </a>
+    </h1>
+    <h4> 날짜 : {{board.update_date}} </h4>
+    <p> 내용 : {{board.body}} </p>
+</div>
+
+{% endfor %}

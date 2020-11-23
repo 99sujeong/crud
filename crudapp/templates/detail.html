@@ -1,0 +1,9 @@
+<div class="container">
+    <a href="{% url 'main' %}">main으로</a>
+
+    <h1>제목 : {{ board.title }}</h1>
+    <p>작성일 : {{ board.update_date }}</p>
+    <p>내용 : {{ board.body }}</p>
+    <a href="{% url 'update' pk=board.pk %}"> 글 수정하기 </a>
+    <a href="{% url 'delete' pk=board.pk %}"> 삭제하기 </a>
+</div>

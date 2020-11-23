@@ -1,0 +1,19 @@
+<h1>Main Page-SIGNUP</h1>
+
+
+{% if request.user.is_authenticated %}
+<h1>환영합니다, {{ user.username }}님! </h1>
+<!--
+<a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+
+<form id="logout" method="POST" action="{% url 'logout' %}">
+    {% csrf_token %} <input type="hidden" />
+</form>
+-->
+
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+</form>
+
+{% endif %}
